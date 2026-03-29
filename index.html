@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">Kilómetro Cero Food</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .title { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+
+<body class="bg-[#f3eee7] text-stone-800">
+
+<!-- HERO -->
+<section class="relative min-h-[80vh] flex items-center px-6 overflow-hidden">
+
+  <!-- FONDO -->
+  <img src="img/hero.jpg" 
+       class="absolute inset-0 w-full h-full object-cover object-center -z-10">
+
+  <div class="absolute inset-0 bg-black/40 -z-10"></div>
+
+  <!-- CONTENIDO -->
+  <div class="max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- TEXTO -->
+    <div class="text-white">
+
+      <p class="uppercase text-sm tracking-widest text-red-400 mb-2">
+        Comida real
+      </p>
+
+      <h1 id="nombre" class="title text-5xl md:text-6xl leading-tight mb-4">
+      </h1>
+
+      <p class="text-gray-200 max-w-md">
+        Ingredientes frescos, producción local y sabores auténticos.
+      </p>
+
+      <!-- BOTONES -->
+      <div class="mt-6 flex gap-3">
+
+        <a id="btnHero"
+           class="bg-red-500 text-white px-6 py-3 rounded-full 
+                  hover:bg-red-600 transition shadow-lg flex items-center gap-2">
+
+          Pedir ahora
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="#menuSection"
+           class="border border-white px-6 py-3 rounded-full 
+                  hover:bg-white hover:text-black transition">
+
+          Ver menú
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- CARD INFO -->
+    <div class="bg-white/90 backdrop-blur rounded-3xl p-6 shadow-xl">
+
+      <h3 class="font-semibold text-lg mb-4">
+        Información
+      </h3>
+
+      <div class="space-y-3 text-sm text-stone-600">
+
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-clock text-red-500"></i>
+          <span>Lunes a Viernes • 7:00 - 19:00</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-clock text-red-500"></i>
+          <span>Sábados • 7:00 - 13:00</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-red-500"></i>
+          <span>Ubicación local</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CATEGORÍAS -->
+<div class="sticky top-0 z-20 bg-[#f3eee7]/95 backdrop-blur border-b border-stone-200">
+
+  <div id="categorias"
+       class="flex gap-3 overflow-x-auto px-6 py-4">
+  </div>
+
+</div>
+
+<!-- MENÚ -->
+<section id="menuSection" class="max-w-5xl mx-auto px-6 py-16">
+
+  <div class="flex items-center justify-between mb-10">
+
+    <h2 class="title text-3xl">
+      Menú
+    </h2>
+
+    <div class="w-20 h-[2px] bg-red-500"></div>
+
+  </div>
+
+  <div id="menu"></div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#1c1c1c] text-gray-400">
+
+  <div class="max-w-5xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6 text-sm">
+
+    <div>
+      <h3 class="text-white font-semibold mb-2">
+        Kilómetro Cero Food
+      </h3>
+      <p>
+        Comida real, sin vueltas.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-2">Contacto</h4>
+      <p>@kilometro_cero_food</p>
+      <p>Ubicación local</p>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-2">Desarrollo</h4>
+      <p>B.C WebStudio</p>
+    </div>
+
+  </div>
+
+  <div class="text-center text-xs py-4 border-t border-white/10">
+    © 2026 Kilómetro Cero Food
+  </div>
+
+</footer>
+
+<!-- BOTÓN WSP -->
+<a id="btnWsp"
+   class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center 
+          bg-green-500 text-white rounded-full shadow-lg 
+          hover:scale-110 transition z-50">
+
+  <i class="fa-brands fa-whatsapp text-2xl"></i>
+
+</a>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
