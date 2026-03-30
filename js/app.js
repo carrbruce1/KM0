@@ -3,7 +3,7 @@ const contCategorias = document.getElementById("categorias");
 
 let categoriaActiva = "";
 
-// 👉 agrupar productos
+// agrupar productos
 function agruparCategorias() {
   const categorias = {};
 
@@ -17,7 +17,7 @@ function agruparCategorias() {
   return categorias;
 }
 
-// 👉 precios
+//  precios
 function generarPrecio(p) {
 
   if (p.precioChico && p.precioGrande) {
@@ -41,7 +41,7 @@ function generarPrecio(p) {
   return `<span class="text-amber-700 font-semibold">${p.precio || ""}</span>`;
 }
 
-// 👉 render categorías
+// render categorías
 function renderCategorias() {
 
   contCategorias.innerHTML = CONFIG.categorias.map(cat => `
@@ -56,51 +56,50 @@ function renderCategorias() {
   `).join("");
 }
 
-// 👉 render productos (CON IMAGEN)
+// render productos (CON IMAGEN)
 function renderProductos() {
 
   const categorias = agruparCategorias();
   const productos = categorias[categoriaActiva] || [];
 
-  menu.innerHTML = `
-    <div class="grid sm:grid-cols-2 gap-4">
+ menu.innerHTML = `
+  <div class="grid gap-4">
 
-      ${productos.map(p => `
-        
-        <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition">
+    ${productos.map(p => `
 
-          ${p.imagen ? `
-            <img src="${p.imagen}" 
-                 class="w-full h-40 object-cover">
-          ` : ""}
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
 
-          <div class="p-4 flex justify-between items-start">
+        <div class="flex justify-between items-start">
 
-            <div>
-              <h4 class="font-medium">${p.nombre}</h4>
-              <p class="text-xs text-gray-400 mt-1">${p.descripcion || ""}</p>
-            </div>
+          <div class="pr-4">
+            <h4 class="font-medium">${p.nombre}</h4>
+            <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+              ${p.descripcion || ""}
+            </p>
+          </div>
 
+          <div class="text-right shrink-0">
             ${generarPrecio(p)}
-
           </div>
 
         </div>
 
-      `).join("")}
+      </div>
 
-    </div>
-  `;
+    `).join("")}
+
+  </div>
+`;
 }
 
-// 👉 cambiar categoría
+// cambiar categoría
 function cambiarCategoria(cat) {
   categoriaActiva = cat;
   renderCategorias();
   renderProductos();
 }
 
-// 👉 init
+// init
 function init() {
 
   document.getElementById("nombre").textContent = CONFIG.nombre;
