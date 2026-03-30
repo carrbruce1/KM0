@@ -109,22 +109,34 @@
 </div>
 
 <!-- MENÚ -->
-<section id="menuSection" class="max-w-5xl mx-auto px-6 py-16">
+<section id="menuSection" class="relative py-16">
 
-  <div class="text-center mb-12">
+  <!-- IMAGEN DE FONDO -->
+  <div class="absolute inset-0 -z-10">
+    <img src="img/fondo.jpg" 
+         class="w-full h-full object-cover object-center">
+    <div class="absolute inset-0 bg-[#f3eee7]/90"></div>
+  </div>
 
-    <h2 class="title text-3xl md:text-4xl font-semibold">
-      Menú
-    </h2>
+  <div class="max-w-5xl mx-auto px-6">
 
-    <div class="w-12 h-[2px] bg-red-500 mx-auto mt-3 rounded-full"></div>
+    <!-- TÍTULO -->
+    <div class="text-center mb-12">
+
+      <h2 class="title text-3xl md:text-4xl font-semibold">
+        Menú
+      </h2>
+
+      <div class="w-12 h-[2px] bg-red-500 mx-auto mt-3 rounded-full"></div>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div id="menu"></div>
 
   </div>
 
-  <div id="menu"></div>
-
 </section>
-
 <!-- FOOTER -->
 <footer class="bg-[#1c1c1c] text-gray-400">
 
